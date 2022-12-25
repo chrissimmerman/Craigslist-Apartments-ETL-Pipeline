@@ -86,13 +86,13 @@ def clean_sqft(df):
     # Replace sq_foot column with cleaned values
     df = df.assign(sq_foot=sq_ft_rows)
 
-    # Calculate median number of bedrooms
+    # Calculate median square foot
     sqft_median = int(df['sq_foot'].median(skipna=True))
 
-    # Replace null values with median number of bedrooms
+    # Replace null values with median square foot
     df['sq_foot'].fillna(sqft_median, inplace=True)
 
-    # Convert remaining strings in bedroom column to ints
+    # Convert remaining strings in sq_ft column to ints
     df['sq_foot'] = [int(s) for s in df['sq_foot']]
 
     return df
