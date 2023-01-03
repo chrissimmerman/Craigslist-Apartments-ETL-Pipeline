@@ -270,7 +270,7 @@ def main():
     # Clean address column
     df = clean_address(df)
 
-    # Create or append databse
+    # Create or append table in databse
     create_or_append(df)
 
 if __name__ == "__main__":
