@@ -1,3 +1,8 @@
 # Craigslist Apartments ETL Pipeline
 
-Craiglist Apartments ETL Pipeline extracts all Minneapolis Craigslist apartment listings, transforms the data into a usable format, and loads the transformed data into a PostgreSQL database. The script can be executed multiple times to append new listings to the database without fear of duplicate rows or repeated index values.
+The Craiglist Apartments ETL Pipeline:
+•	Extracts all Minneapolis Craigslist apartment listings using the requests and Beautiful Soup libraries.
+•	Transforms data using string functions, regular expressions, and type casting, in addition to using Pandas and NumPy to handle null values.
+•	Loads transformed data into a PostgreSQL relational database using Pandas and SQLAlchemy.
+
+The script can be executed multiple times to append new listings to the database without fear of duplicate rows or repeated index values.
