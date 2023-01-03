@@ -251,12 +251,8 @@ def create_or_append(df):
     engine.dispose()
 
 def main():
-    # Scrape housing listings
-    listings = scrape()
-
-    # Put list in dataframe and clear housing list
-    df = pd.DataFrame(listings)
-    listings.clear()
+    # Scrape housing listings, putting result in dataframe
+    df = pd.DataFrame(scrape())
 
     # Clean price column
     df = clean_price(df)
